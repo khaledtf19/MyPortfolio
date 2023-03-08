@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import Home from "../components/sections/Home.astro";
+import Projects from "../components/sections/Projects.astro";
+import About from "../components/sections/About.astro";
+import Contact from "../components/sections/Contact.astro";
+---
+
+<Layout title="Hello">
+  <Section label="Home" name="home"><Home /></Section>
+  <Section label="About" name="about"><About /></Section>
+  <Section label="Projects" name="projects"><Projects /></Section>
+  <Section label="Contact" name="contact"><Contact /></Section>
+</Layout>
