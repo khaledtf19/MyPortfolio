@@ -4,9 +4,9 @@ import NavData from "../data/NavData";
 ---
 
 <nav
-  class="fixed flex bg-gray-900 text-white p-5 w-full h-20 top-0 font-burtons"
+  class="fixed flex backdrop-blur-md bg-transparent text-white p-5 w-full h-20 top-0 font-burtons z-50 font-DistantGalaxy lg:text-3xl"
 >
-  <ul class="flex justify-start items-center gap-5">
+  <ul class="flex justify-between w-full lg:px-20 items-center lg:gap-20">
     {
       NavData.map((item) => (
         <li>

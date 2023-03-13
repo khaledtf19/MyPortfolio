@@ -1,0 +1,31 @@
+---
+interface Props {
+  href?: string;
+  openInNewTab?: boolean;
+  rounded?: "full" | "md" | "none";
+  variant?: "primary" | "secondary";
+  className?: string;
+}
+
+const {
+  href = "",
+  rounded = "md",
+  variant = "primary",
+  openInNewTab = false,
+  className = "",
+} = Astro.props;
+
+const roundedClass =
+  rounded === "full" ? "rounded-full" : rounded === "md" ? "rounded-md" : "";
+const variantClass =
+  variant === "primary"
+    ? "bg-purple-800 hover:bg-purple-900 text-slate-400"
+    : "bg-white/10 hover:bg-white/20 text-white";
+---
+
+<a
+  href={href}
+  target={openInNewTab ? "_blank" : "_self"}
+  class={`${className} ${roundedClass} ${variantClass} inline-flex items-center text-center py-2 px-3 font-semibold transition-colors text-sm duration-500`}
+  ><slot /></a
+>

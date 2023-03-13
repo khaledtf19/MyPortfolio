@@ -1,0 +1,12 @@
+---
+import { Icon } from "astro-icon";
+import { FrontSkills, BackSkills } from "../../data/SkillsData";
+import SkillsContainer from "../SkillsContainer.astro";
+---
+
+<div
+  class="w-full flex flex-col justify-start items-center gap-10 lg h-full px-5 py-10"
+>
+  <SkillsContainer data={FrontSkills} label="Frontend" />
+  <SkillsContainer data={BackSkills} label="Backend" />
+</div>

@@ -1,12 +1,28 @@
 ---
 interface Props {
   name: string;
-  label: string;
+  label?: string;
+  className?: string;
+  justify?: "top" | "center" | "bottom";
 }
 
-const { name, label } = Astro.props as Props;
+const {
+  name = "",
+  label = "",
+  className = "",
+  justify = "center",
+} = Astro.props as Props;
+const justifyClass =
+  justify === "center"
+    ? "justify-center"
+    : justify === "top"
+    ? "justify-start"
+    : "justify-end";
 ---
 
-<section class="text-black w-screen h-screen" id={name}>
+<section
+  class={`text-black w-full max-h-screen min-h-[70vh] h-full ${justifyClass}  items-center flex flex-col ${className}`}
+  id={name}
+>
   <slot />
 </section>

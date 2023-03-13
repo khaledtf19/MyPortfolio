@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon";
+import { SkillType } from "../data/SkillsData";
+
+interface Props {
+  label: string;
+  data: SkillType[];
+}
+
+const { label, data } = Astro.props;
+---
+
+<div
+  class="border rounded-lg bg-gray-900 border-purple-900 p-3 w-full shadow-lg flex flex-col items-center gap-3"
+>
+  <h1 class="text-white font-DistantGalaxy text-2xl">{label}</h1>
+  <div
+    class="grid grid-flow-row grid-cols-3 gap-x-3 gap-y-6 w-full place-items-center"
+  >
+    {
+      data.map((skill) => (
+        <div class=" bg-white rounded-lg w-20 flex flex-col justify-center items-center p-1 h-full text-sm hover:scale-110 transition-transform duration-300 hover:shadow-lg">
+          <div class=" w-10">
+            <Icon name={skill.iconName} />
+          </div>
+          <p>{skill.name}</p>
+        </div>
+      ))
+    }
+  </div>
+</div>

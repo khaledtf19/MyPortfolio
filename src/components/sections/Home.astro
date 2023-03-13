@@ -1,4 +1,59 @@
 ---
+import { Picture } from "@astrojs/image/components";
+import Button from "../Button.astro";
 ---
 
-<div>hi</div>
+<div class="w-full flex flex-col items-center gap-6 lg h-full px-5 py-10">
+  <Picture
+    src="/public/images/Khaled.jpg"
+    alt=""
+    widths={[300, 600, 900]}
+    sizes="(max-width: 768px) 300px, (max-width: 1024px) 600px, 900px"
+    width={300}
+    height={300}
+    aspectRatio={1}
+    format="avif"
+    class="rounded-full border border-gray-200 w-52 md:w-96 lg drop-shadow-md shadow-xl"
+  />
+  <div class="flex flex-col gap-5 items-center">
+    <div class="w-full flex items-center flex-col text-white">
+      <h1 class="text-3xl font-extrabold">
+        My name is <a class="text-[hsl(280,100%,60%)]" href="#skills">Khaled</a>
+      </h1>
+      <h2 class="text-2xl font-display text-gray-500 font-semibold">
+        A Frontend Web Developer
+      </h2>
+      <p class="text-lg text-center font-display text-gray-500 font-semibold">
+        I love exploring and building things <br /> with
+        <a class="text-blue-800" href="#projects">Typescript</a> and
+        <a class="text-blue-500" href="#projects">React</a>
+        <br />
+        and playing <span>Chess</span>
+      </p>
+    </div>
+    <div class="flex items-center gap-5">
+      <Button
+        href="#skills"
+        rounded="full"
+        className=" bg-white hover:bg-white/70 text-slate-600"
+      >
+        My skills
+        <svg
+          class="stroke mt-0.5 ml-2 -mr-1 h-3 stroke-current stroke-2"
+          fill="none"
+          viewBox="0 0 10 10"
+          aria-hidden="true"
+        >
+          <path class="opacity-0 transition group-hover:opacity-100" d="M0 5h7"
+          ></path>
+          <path
+            class="transition group-hover:translate-x-[3px]"
+            d="M1 1l4 4-4 4"></path>
+        </svg>
+      </Button>
+      <Button href="#contact" variant="secondary" rounded="full">
+        Hire me
+      </Button>
+    </div>
+  </div>
+</div>
