@@ -3,7 +3,7 @@ interface Props {
   href?: string;
   openInNewTab?: boolean;
   rounded?: "full" | "md" | "none";
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "tertiary";
   className?: string;
 }
 
@@ -19,8 +19,10 @@ const roundedClass =
   rounded === "full" ? "rounded-full" : rounded === "md" ? "rounded-md" : "";
 const variantClass =
   variant === "primary"
-    ? "bg-purple-800 hover:bg-purple-900 text-slate-400"
-    : "bg-white/10 hover:bg-white/20 text-white";
+    ? "bg-white hover:bg-white/70 text-slate-600"
+    : variant === "secondary"
+    ? "bg-white/10 hover:bg-white/20 text-white"
+    : "bg-purple-800 hover:bg-purple-900 text-slate-200 ";
 ---
 
 <a

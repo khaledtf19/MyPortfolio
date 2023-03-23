@@ -1,0 +1,148 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { Project } from "../data/ProjectsData";
+import Button from "./Button.astro";
+import { Icon } from "astro-icon";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props as Props;
+---
+
+<div
+  class="w-full flex flex-col bg-white/5 items-center rounded-3xl gap-2 border border-primary-300/50"
+>
+  <div class="bg-white/10 w-full rounded-t-3xl p-3">
+    <h2 class="font-DistantGalaxy text-3xl text-white text-center">
+      {project.name}
+    </h2>
+  </div>
+
+  <div class="relative w-full flex gap-1 items-center justify-center p-2">
+    <Picture
+      src={`images/projects/${project.images[0]}.png`}
+      alt=""
+      widths={[300, 600, 900]}
+      sizes="(max-width: 768px) 300px, (max-width: 1024px) 600px, 900px"
+      height={300}
+      width={300}
+      aspectRatio={16 / 10}
+      format="avif"
+      class={` md:w-96 drop-shadow-md w-full object-scale-down  ${
+        project.images.length > 1 ? "h-44" : "h-full "
+      }`}
+    />
+    {
+      project.images.length > 1 ? (
+        <Picture
+          src={`images/projects/${project.images[1]}.png`}
+          alt=""
+          widths={[300, 600, 900]}
+          sizes="(max-width: 768px) 300px, (max-width: 1024px) 600px, 900px"
+          height={300}
+          width={300}
+          aspectRatio={8 / 19}
+          format="avif"
+          class="w-full h-52 md:w-96 object-scale-down"
+        />
+      ) : (
+        ""
+      )
+    }
+  </div>
+  <div class="flex gap-2 justify-evenly w-full">
+    {
+      project.skills.map((skill) => (
+        <div class=" p-1 bg-white rounded-xl">
+          <div class="w-10 ">
+            <Icon name={`${skill}-icon`} />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <div class="w-full flex items-center justify-center p-4">
+    {
+      project.gitHub ? (
+        <Button href={project.gitHub} openInNewTab={true} rounded="full">
+          GitHub
+          <svg
+            class="stroke mt-0.5 ml-2 -mr-1 h-3 stroke-current stroke-2"
+            fill="none"
+            viewBox="0 0 10 10"
+            aria-hidden="true"
+          >
+            <path
+              class="opacity-0 transition group-hover:opacity-100"
+              d="M0 5h7"
+            />
+            <path
+              class="transition group-hover:translate-x-[3px]"
+              d="M1 1l4 4-4 4"
+            />
+          </svg>
+        </Button>
+      ) : (
+        <div class=" flex justify-evenly w-full">
+          <Button
+            href={project.frontendGitHub}
+            openInNewTab={true}
+            rounded="full"
+          >
+            Frontend
+            <svg
+              class="stroke mt-0.5 ml-2 -mr-1 h-3 stroke-current stroke-2"
+              fill="none"
+              viewBox="0 0 10 10"
+              aria-hidden="true"
+            >
+              <path
+                class="opacity-0 transition group-hover:opacity-100"
+                d="M0 5h7"
+              />
+              <path
+                class="transition group-hover:translate-x-[3px]"
+                d="M1 1l4 4-4 4"
+              />
+            </svg>
+          </Button>
+          {project.liveLink ? (
+            <Button
+              href={project.liveLink}
+              variant="tertiary"
+              openInNewTab={true}
+            >
+              Live App
+            </Button>
+          ) : (
+            ""
+          )}
+          <Button
+            href={project.backendGitHub}
+            openInNewTab={true}
+            rounded="full"
+          >
+            Backend
+            <svg
+              class="stroke mt-0.5 ml-2 -mr-1 h-3 stroke-current stroke-2"
+              fill="none"
+              viewBox="0 0 10 10"
+              aria-hidden="true"
+            >
+              <path
+                class="opacity-0 transition group-hover:opacity-100"
+                d="M0 5h7"
+              />
+              <path
+                class="transition group-hover:translate-x-[3px]"
+                d="M1 1l4 4-4 4"
+              />
+            </svg>
+          </Button>
+        </div>
+      )
+    }
+  </div>
+</div>

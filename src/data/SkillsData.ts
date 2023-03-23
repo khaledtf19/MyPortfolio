@@ -4,25 +4,25 @@ export interface SkillType {
 }
 
 export const FrontSkills: SkillType[] = [
-  { name: "HTML", iconName: "HTML-icon" },
-  { name: "CSS", iconName: "CSS-icon" },
-  { name: "JavaScript", iconName: "Javascript-icon" },
-  { name: "TypeScript", iconName: "Typescript-icon" },
-  { name: "React", iconName: "React-icon" },
-  { name: "Next JS", iconName: "NextJS-icon" },
-  { name: "SASS", iconName: "SASS-icon" },
-  { name: "Tailwind", iconName: "Tailwind-icon" },
-  { name: "Botstrap", iconName: "Botstrap-icon" },
+  { name: "HTML", iconName: "HTML" },
+  { name: "CSS", iconName: "CSS" },
+  { name: "JavaScript", iconName: "JavaScript" },
+  { name: "TypeScript", iconName: "TypeScript" },
+  { name: "React", iconName: "React" },
+  { name: "Next JS", iconName: "NextJS" },
+  { name: "Astro", iconName: "Astro" },
+  { name: "SASS", iconName: "SASS" },
+  { name: "Tailwind", iconName: "Tailwind" },
 ];
 
 export const BackSkills: SkillType[] = [
-  { name: "JavaScript", iconName: "Javascript-icon" },
-  { name: "TypeScript", iconName: "Typescript-icon" },
-  { name: "Node JS", iconName: "NodeJS-icon" },
-  { name: "NextJS", iconName: "NextJS-icon" },
-  { name: "Nest JS", iconName: "NestJS-icon" },
-  { name: "Prisma", iconName: "Prisma-icon" },
-  { name: "tRPC", iconName: "tRPC-icon" },
-  { name: "MongoDB", iconName: "MongoDB-icon" },
-  { name: "PostgreSQL", iconName: "Postgresql-icon" },
+  { name: "JavaScript", iconName: "JavaScript" },
+  { name: "TypeScript", iconName: "TypeScript" },
+  { name: "Node JS", iconName: "NodeJS" },
+  { name: "NextJS", iconName: "NextJS" },
+  { name: "Nest JS", iconName: "NestJS" },
+  { name: "Prisma", iconName: "Prisma" },
+  { name: "tRPC", iconName: "tRPC" },
+  { name: "MongoDB", iconName: "MongoDB" },
+  { name: "PostgreSQL", iconName: "Postgresql" },
 ];

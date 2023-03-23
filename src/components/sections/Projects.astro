@@ -1,4 +1,8 @@
 ---
+import { Projects } from "../../data/ProjectsData";
+import ProjectContainer from "../ProjectContainer.astro";
 ---
 
-<div>hi3</div>
+<div class="w-full flex flex-col gap-5">
+  {Projects.map((project) => <ProjectContainer project={project} />)}
+</div>
