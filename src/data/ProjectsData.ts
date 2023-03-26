@@ -20,14 +20,14 @@ export const Projects: Project[] = [
     images: ["Lposts2-desktop", "Lposts2-mobile"],
     frontendGitHub: "https://github.com/khaledtf19/Lposts2--Frontend",
     backendGitHub: "https://github.com/khaledtf19/Lposts2-Backend",
-    skills: ["NextJS", "NestJS", "MongoDB", "TypeScript", "SASS"],
+    skills: ["NextJS", "NestJS", "TypeScript", "MongoDB", "SASS"],
     liveLink: "https://lposts2-frontend.vercel.app/",
   },
   {
     name: "Lposts",
     images: ["Lposts-desktop", "Lposts-mobile"],
     gitHub: "https://github.com/khaledtf19/Lposts",
-    skills: ["React", "NodeJS", "MongoDB", "JavaScript", "CSS"],
+    skills: ["React", "NodeJS", "JavaScript", "MongoDB", "CSS"],
   },
   {
     name: "MoviesP",

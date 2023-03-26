@@ -4,12 +4,14 @@ import Section from "../components/Section.astro";
 import Home from "../components/sections/Home.astro";
 import Projects from "../components/sections/Projects.astro";
 import Skills from "../components/sections/Skills.astro";
-import Contact from "../components/sections/Contact.astro";
+import Contact from "../components/sections/Contact";
 ---
 
-<Layout title="Hello">
+<Layout title="Khaled's portfolio">
   <Section label="Home" name="home"><Home /></Section>
   <Section label="Skills" justify="top" name="skills"><Skills /></Section>
   <Section label="Projects" name="projects"><Projects /></Section>
-  <Section label="Contact" name="contact"><Contact /></Section>
+  <Section label="Contact" justify="bottom" name="contact">
+    <Contact client:load />
+  </Section>
 </Layout>

@@ -20,7 +20,9 @@ const { project } = Astro.props as Props;
     </h2>
   </div>
 
-  <div class="relative w-full flex gap-1 items-center justify-center p-2">
+  <div
+    class="relative w-full flex gap-1 items-center justify-center p-2 lg:h-64"
+  >
     <Picture
       src={`images/projects/${project.images[0]}.png`}
       alt=""
@@ -30,8 +32,8 @@ const { project } = Astro.props as Props;
       width={300}
       aspectRatio={16 / 10}
       format="avif"
-      class={` md:w-96 drop-shadow-md w-full object-scale-down  ${
-        project.images.length > 1 ? "h-44" : "h-full "
+      class={` drop-shadow-md w-full object-scale-down  ${
+        project.images.length > 1 ? "h-52 " : "h-full md:w-96  "
       }`}
     />
     {
@@ -45,7 +47,7 @@ const { project } = Astro.props as Props;
           width={300}
           aspectRatio={8 / 19}
           format="avif"
-          class="w-full h-52 md:w-96 object-scale-down"
+          class="w-full h-52  object-scale-down"
         />
       ) : (
         ""

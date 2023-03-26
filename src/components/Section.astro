@@ -14,14 +14,14 @@ const {
 } = Astro.props as Props;
 const justifyClass =
   justify === "center"
-    ? "justify-center"
+    ? "justify-center px-1"
     : justify === "top"
-    ? "justify-start"
-    : "justify-end";
+    ? "justify-start px-1"
+    : "justify-end ";
 ---
 
 <section
-  class={`text-black w-full  min-h-[70vh] h-full ${justifyClass}  items-center flex flex-col ${className}`}
+  class={`text-black w-full  min-h-[60vh] h-full ${justifyClass}  items-center flex flex-col ${className}`}
   id={name}
 >
   <slot />

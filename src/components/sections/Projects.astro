@@ -3,6 +3,6 @@ import { Projects } from "../../data/ProjectsData";
 import ProjectContainer from "../ProjectContainer.astro";
 ---
 
-<div class="w-full flex flex-col gap-5">
+<div class="w-full flex flex-col gap-5 lg:grid lg:grid-cols-2 lg lg:px-32">
   {Projects.map((project) => <ProjectContainer project={project} />)}
 </div>
