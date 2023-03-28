@@ -1,6 +1,5 @@
 import { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { BiSend } from "react-icons/bi";
 import { SyncLoader } from "react-spinners";
 
 const Contact = () => {
@@ -90,7 +89,7 @@ const Contact = () => {
             type="submit"
             className="p-1 bg-primary-900 rounded-xl py-1 w-full flex items-center justify-center hover:bg-primary-800 transition-colors duration-500"
           >
-            <BiSend className=" text-white" size={25} />
+            Send
           </button>
         </form>
       </div>
