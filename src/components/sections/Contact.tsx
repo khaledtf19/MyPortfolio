@@ -1,10 +1,9 @@
 import { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { SyncLoader } from "react-spinners";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
-  const [finished, setFinished] = useState(true);
+  const [finished, setFinished] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
@@ -42,7 +41,7 @@ const Contact = () => {
       <div className="w-full md:w-2/3 lg:w-1/3 relative flex item-center justify-center">
         {loading ? (
           <div className="  absolute z-50 self-center w-full  flex items-center justify-center ">
-            <SyncLoader color="#231ed3" />
+            Loading...
           </div>
         ) : finished ? (
           <div className="absolute z-50 self-center w-full h-full shadow-lg rounded-lg  flex items-center justify-center bg-white/10 text-xl">
