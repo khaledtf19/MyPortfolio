@@ -1,19 +1,17 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import Button from "../Button.astro";
 ---
 
 <div
   class="w-full flex flex-col md:flex-row-reverse md:justify-center items-center gap-6 lg h-full px-2 py-10"
 >
-  <Picture
+  <Image
     src="images/Khaled.jpg"
     alt=""
-    widths={[300, 600, 900]}
     sizes="(max-width: 768px) 300px, (max-width: 1024px) 600px, 900px"
     width={300}
     height={300}
-    aspectRatio={1}
     format="avif"
     class="rounded-full md:rounded-md border border-gray-200 w-52 md:w-96 lg drop-shadow-md shadow-xl animate-floating"
   />
