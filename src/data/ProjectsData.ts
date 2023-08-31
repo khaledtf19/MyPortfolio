@@ -8,7 +8,7 @@ export interface Project {
   skills: string[];
 }
 
-export const Projects: Project[] = [
+export const projects: Project[] = [
   {
     name: "invoices",
     images: ["Invoices-desktop"],

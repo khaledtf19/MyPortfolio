@@ -1,6 +1,6 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import { Project } from "../data/ProjectsData";
+import { Image } from "astro:assets";
+import { type Project } from "../data/ProjectsData";
 import Button from "./Button.astro";
 import { Icon } from "astro-icon";
 
@@ -23,14 +23,12 @@ const { project } = Astro.props as Props;
   <div
     class="relative w-full flex gap-1 items-center justify-center p-2 lg:h-64"
   >
-    <Picture
+    <Image
       src={`images/projects/${project.images[0]}.png`}
       alt=""
-      widths={[300, 600, 900]}
       sizes="(max-width: 768px) 300px, (max-width: 1024px) 600px, 900px"
       height={300}
       width={300}
-      aspectRatio={16 / 10}
       format="avif"
       class={` drop-shadow-md w-full object-scale-down  ${
         project.images.length > 1 ? "h-52 " : "h-full md:w-96  "
@@ -38,14 +36,12 @@ const { project } = Astro.props as Props;
     />
     {
       project.images.length > 1 ? (
-        <Picture
+        <Image
           src={`images/projects/${project.images[1]}.png`}
           alt=""
-          widths={[300, 600, 900]}
           sizes="(max-width: 768px) 300px, (max-width: 1024px) 600px, 900px"
           height={300}
           width={300}
-          aspectRatio={8 / 19}
           format="avif"
           class="w-full h-52  object-scale-down"
         />
