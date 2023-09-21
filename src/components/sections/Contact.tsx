@@ -1,4 +1,4 @@
-import { FormEvent, useRef, useState } from "react";
+import { type FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
