@@ -54,9 +54,8 @@ const Contact = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className={`flex flex-col items-center justify-center w-full gap-5 ${
-            loading ? "blur pointer-events-none animate-pulse" : ""
-          } ${finished ? "blur pointer-events-none" : ""}`}
+          className={`flex flex-col items-center justify-center w-full gap-5 ${loading ? "blur pointer-events-none animate-pulse" : ""
+            } ${finished ? "blur pointer-events-none" : ""}`}
         >
           <input
             type="text"

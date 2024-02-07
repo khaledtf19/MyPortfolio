@@ -24,7 +24,7 @@ const { project } = Astro.props as Props;
     class="relative w-full flex gap-1 items-center justify-center p-2 lg:h-64"
   >
     <Image
-      src={`images/projects/${project.images[0]}.png`}
+      src={project.images[0]}
       alt=""
       sizes="(max-width: 768px) 300px, (max-width: 1024px) 600px, 900px"
       height={300}
@@ -37,7 +37,7 @@ const { project } = Astro.props as Props;
     {
       project.images.length > 1 ? (
         <Image
-          src={`images/projects/${project.images[1]}.png`}
+          src={project.images[1]}
           alt=""
           sizes="(max-width: 768px) 300px, (max-width: 1024px) 600px, 900px"
           height={300}

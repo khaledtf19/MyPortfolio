@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import khaledImage from "../../images/Khaled.jpg";
 import Button from "../Button.astro";
 ---
 
@@ -7,7 +8,7 @@ import Button from "../Button.astro";
   class="w-full flex flex-col md:flex-row-reverse md:justify-center items-center gap-6 lg h-full px-2 py-10"
 >
   <Image
-    src="images/Khaled.jpg"
+    src={khaledImage}
     alt=""
     sizes="(max-width: 768px) 300px, (max-width: 1024px) 600px, 900px"
     width={300}

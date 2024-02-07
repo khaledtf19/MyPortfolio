@@ -1,0 +1,7 @@
+export { default as LpostsMobile } from "./Lposts-mobile.png"
+export { default as LpostsDesktop } from "./Lposts-desktop.png"
+export { default as Lposts2Mobile } from "./Lposts2-mobile.png"
+export { default as Lposts2Desktop } from "./Lposts2-desktop.png"
+export { default as MoviePMobile } from "./MovieP-mobile.png"
+export { default as MoviePDesktop } from "./MovieP-desktop.png"
+export { default as InvoicesDesktop } from "./Invoices-desktop.png"

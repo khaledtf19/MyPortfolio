@@ -5,9 +5,9 @@ interface NavDataType {
 }
 
 const NavData: NavDataType[] = [
-  { name: "Home", path: "#home", iconName: "name" },
-  { name: "Skills", path: "#skills", iconName: "name" },
-  { name: "Projects", path: "#projects", iconName: "name" },
+  { name: "Home", path: "/", iconName: "name" },
+  { name: "Skills", path: "/skills", iconName: "name" },
+  { name: "Projects", path: "/projects", iconName: "name" },
   { name: "Contact", path: "#contact", iconName: "name" },
 ];
 
