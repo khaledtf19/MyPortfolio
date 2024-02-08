@@ -55,7 +55,7 @@ const { project } = Astro.props as Props;
       project.skills.map((skill) => (
         <div class=" p-1 bg-white rounded-xl">
           <div class="w-10 ">
-            <Icon name={`${skill}-icon`} />
+            <Icon name={`${skill}-icon`} class="w-full h-full" />
           </div>
         </div>
       ))
