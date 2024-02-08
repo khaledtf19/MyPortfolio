@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 ---
 
 <div
@@ -9,19 +9,22 @@ import { Icon } from "astro-icon";
     <a
       href="https://github.com/khaledtf19"
       target="_blank"
-      class="flex flex-col justify-center items-center hover:opacity-70 bg-white rounded-full hover:cursor-pointer"
+      class="flex flex-col justify-center items-center hover:opacity-70 hover:cursor-pointer relative"
     >
       <div class="w-10">
-        <Icon name="GitHub-icon" />
+        <Icon
+          name="github"
+          class="h-full w-full bg-black relative rounded-full"
+        />
       </div>
     </a>
     <a
       href="https://www.linkedin.com/in/khaledtf19/"
       target="_blank"
-      class="flex flex-col justify-center items-center hover:opacity-70 bg-white rounded-full hover:cursor-pointer"
+      class="flex flex-col justify-center items-center hover:opacity-70 bg-white hover:cursor-pointer rounded-md"
     >
       <div class="w-10">
-        <Icon name="Linkedin-icon" />
+        <Icon name="Linkedin" class="h-full w-full bg-black" />
       </div>
     </a>
   </div>
