@@ -29,7 +29,6 @@ const { project } = Astro.props as Props;
       sizes="(max-width: 768px) 300px, (max-width: 1024px) 600px, 900px"
       height={300}
       width={300}
-      format="avif"
       class={` drop-shadow-md w-full object-scale-down  ${
         project.images.length > 1 ? "h-52 " : "h-full md:w-96  "
       }`}
@@ -42,7 +41,6 @@ const { project } = Astro.props as Props;
           sizes="(max-width: 768px) 300px, (max-width: 1024px) 600px, 900px"
           height={300}
           width={300}
-          format="avif"
           class="w-full h-52  object-scale-down"
         />
       ) : (
